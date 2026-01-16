@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "MinerU CLI for Zotero",
+  "version": "0.1.0",
+  "description": "Parse PDF attachments via MinerU CLI and attach Markdown",
+  "applications": {
+    "zotero": {
+      "id": "mineru-cli-zotero@example.com",
+      "update_url": "https://raw.githubusercontent.com/leike0813/mineru-cli-zotero/main/updates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "7.1.*"
+    }
+  }
+}

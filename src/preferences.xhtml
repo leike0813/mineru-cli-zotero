@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>MinerU CLI</title>
+    <link rel="localization" href="mineru-cli-zotero.ftl" />
+    <style>
+      body {
+        font: menu;
+        margin: 16px;
+      }
+      h1 {
+        font-size: 1.2em;
+        margin: 0 0 12px;
+      }
+      .field {
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .note {
+        font-size: 0.9em;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 data-l10n-id="mineru-cli-zotero-pref-title">MinerU CLI</h1>
+    <div class="field">
+      <label for="mineru-cli-path" data-l10n-id="mineru-cli-zotero-pref-cli-path-label">CLI path</label>
+      <input id="mineru-cli-path" type="text" />
+    </div>
+    <div class="field">
+      <label for="mineru-endpoint" data-l10n-id="mineru-cli-zotero-pref-endpoint-label">Endpoint</label>
+      <input id="mineru-endpoint" type="text" />
+    </div>
+    <div class="field">
+      <label for="mineru-api-key" data-l10n-id="mineru-cli-zotero-pref-api-key-label">API key</label>
+      <input id="mineru-api-key" type="password" />
+      <div class="note" data-l10n-id="mineru-cli-zotero-pref-api-key-note">
+        The API key is stored in Zotero preferences.
+      </div>
+    </div>
+  </body>
+</html>

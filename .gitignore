@@ -1,0 +1,5 @@
+build/
+*.xpi
+.DS_Store
+Thumbs.db
+make-it-red/
