@@ -3,9 +3,9 @@
     "mineru-cli-zotero@example.com": {
       "updates": [
         {
-          "version": "0.1.1",
-          "update_link": "https://github.com/leike0813/mineru-cli-zotero/releases/download/v0.1.1/mineru-cli-zotero.xpi",
-          "update_hash": "sha256:f9faae426d54c4b585f18f6a667882abfa6ec82d79725e9824d134105e47793d",
+          "version": "0.1.9",
+          "update_link": "https://github.com/leike0813/mineru-cli-zotero/releases/download/v0.1.9/mineru-cli-zotero.xpi",
+          "update_hash": "sha256:bb6540eb9127a63d1ecc7dce4e7b5c4cd77ed4d218e637be398dfec47e3138a6",
           "applications": {
             "zotero": {
               "strict_min_version": "7.0"

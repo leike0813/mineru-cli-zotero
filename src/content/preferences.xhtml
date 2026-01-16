@@ -1,0 +1,78 @@
+<linkset
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+>
+  <html:link rel="localization" href="mineru-cli-zotero-preferences.ftl" />
+  <html:style>
+    .mineru-cli-zotero-pref-input {
+      width: 360px;
+    }
+    .mineru-cli-zotero-pref-browse {
+      margin-inline-start: 8px;
+    }
+    .mineru-cli-zotero-pref-label {
+      min-width: 90px;
+    }
+    .mineru-cli-zotero-pref-input::placeholder {
+      color: #9a9a9a;
+    }
+    .mineru-cli-zotero-pref-input:focus::placeholder {
+      color: transparent;
+    }
+  </html:style>
+</linkset>
+
+<groupbox
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>
+  <vbox>
+    <html:h3 data-l10n-id="mineru-cli-zotero-pref-title" />
+    <hbox align="center">
+      <html:label
+        class="mineru-cli-zotero-pref-label"
+        for="mineru-cli-zotero-cli-path"
+        data-l10n-id="mineru-cli-zotero-pref-cli-path-label"
+      />
+      <html:input
+        id="mineru-cli-zotero-cli-path"
+        class="mineru-cli-zotero-pref-input"
+        type="text"
+        preference="extensions.mineru-cli-zotero.cliPath"
+      />
+      <button
+        id="mineru-cli-zotero-cli-browse"
+        class="mineru-cli-zotero-pref-browse"
+        data-l10n-id="mineru-cli-zotero-pref-cli-path-browse"
+        oncommand="Zotero.MineruCliZotero.onBrowseCli(window)"
+      ></button>
+    </hbox>
+    <hbox align="center">
+      <html:label
+        class="mineru-cli-zotero-pref-label"
+        for="mineru-cli-zotero-endpoint"
+        data-l10n-id="mineru-cli-zotero-pref-endpoint-label"
+      />
+      <html:input
+        id="mineru-cli-zotero-endpoint"
+        class="mineru-cli-zotero-pref-input"
+        type="text"
+        placeholder="https://mineru.net/api/v4"
+        preference="extensions.mineru-cli-zotero.endpoint"
+      />
+    </hbox>
+    <hbox align="center">
+      <html:label
+        class="mineru-cli-zotero-pref-label"
+        for="mineru-cli-zotero-api-key"
+        data-l10n-id="mineru-cli-zotero-pref-api-key-label"
+      />
+      <html:input
+        id="mineru-cli-zotero-api-key"
+        class="mineru-cli-zotero-pref-input"
+        type="password"
+        preference="extensions.mineru-cli-zotero.apiKey"
+      />
+    </hbox>
+    <description data-l10n-id="mineru-cli-zotero-pref-api-key-note" />
+  </vbox>
+</groupbox>
