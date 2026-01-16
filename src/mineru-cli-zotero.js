@@ -1,5 +1,5 @@
 var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
-var { OS } = ChromeUtils.import("resource://gre/modules/osfile.jsm");
+var { IOUtils } = ChromeUtils.importESModule("resource://gre/modules/IOUtils.sys.mjs");
 
 const PREF_PREFIX = "extensions.mineru-cli-zotero.";
 
@@ -330,13 +330,13 @@ var MineruCliZotero = {
 		let suffix = Zotero.Utilities.randomString ? Zotero.Utilities.randomString(8) : String(Date.now());
 		tmpDir.append(`mineru-cli-zotero-${suffix}.json`);
 		let payload = JSON.stringify({ endpoint: endpoint, api_key: apiKey }, null, 2);
-		await OS.File.writeAtomic(tmpDir.path, payload, { encoding: "utf-8" });
+		await IOUtils.writeUTF8(tmpDir.path, payload);
 		return tmpDir.path;
 	},
 
 	async _removeTempConfig(path) {
 		try {
-			await OS.File.remove(path);
+			await IOUtils.remove(path);
 		} catch (err) {
 			this.log(`Failed to remove temp config: ${err}`);
 		}
